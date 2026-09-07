@@ -14,7 +14,7 @@ window.INTO_SKY = {
 
   releases: [
     {
-      cat: "INTO-CR-0001", artist: "Caoilfhionn Rose", title: "Draw Out Your World",
+      cat: "INTO-CR-001", artist: "Caoilfhionn Rose", title: "Draw Out Your World",
       status: "Coming soon", format: "LP / CD / Digital", date: "5 February 2027",
       blurb: "Caoilfhionn Rose returns with her fourth album ‘Draw Out Your World’ - “The music was made in the moment, it’s full of improvisation and experimentation. It feels like a real celebration of collaboration and coming together through music.”",
       cover: "assets/img/covers/draw-out-your-world.jpg",
