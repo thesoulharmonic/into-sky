@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Into Sky — Record Label</title>
+<meta name="description" content="Into Sky — independent record label. Releases, artists, merch and contact.">
+<meta name="theme-color" content="#e8f6fc">
+<meta property="og:title" content="Into Sky — Record Label">
+<meta property="og:description" content="Into Sky — independent record label.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/mark-badge.png">
+<link rel="apple-touch-icon" href="assets/img/mark-badge.png">
+<link rel="preload" href="assets/fonts/joanestencil-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/bodonimoda-normal-400_800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============ loader ============ -->
+<div class="loader" id="loader">
+  <div class="loader__inner">
+    <img class="loader__mark" src="assets/img/mark-doodle.png" alt="" width="283" height="233">
+    <div class="loader__word">into sky</div>
+    <div class="loader__bar"><i id="loaderBar"></i></div>
+    <div class="loader__num"><span id="loaderNum">00</span> — 100</div>
+  </div>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- ============ nav ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__row">
+    <a class="brand" href="#top" aria-label="Into Sky, home">
+      <img src="assets/img/mark-doodle.png" alt="Into Sky" width="283" height="233">
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#releases" data-link>Releases</a>
+      <a href="#about" data-link>About</a>
+      <a href="#artists" data-link>Artists</a>
+      <a href="#merch" data-link hidden>Merch</a>
+      <a href="#contact" data-link>Contact</a>
+    </nav>
+    <a class="nav__cta" href="#signup" data-link>Join the list</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="#releases" data-link><span>Releases</span></a>
+    <a href="#about" data-link><span>About</span></a>
+    <a href="#artists" data-link><span>Artists</span></a>
+    <a href="#merch" data-link hidden><span>Merch</span></a>
+    <a href="#contact" data-link><span>Contact</span></a>
+  </nav>
+  <div class="menu__foot">Manchester, UK — hello@intosky.co.uk</div>
+</div>
+
+<main id="top">
+
+<!-- ============ hero / release slider ============ -->
+<section class="hero" id="releases" aria-roledescription="carousel" aria-label="Latest releases">
+  <div class="wrap" style="flex:1;display:flex;flex-direction:column">
+    <div class="hero__grid">
+
+      <div class="slides" id="slides"></div>
+
+      <div class="covers" id="covers">
+        <div class="covers__shadow" aria-hidden="true"></div>
+      </div>
+
+    </div>
+
+    <div class="hero__bar">
+      <div class="dots" id="dots" role="tablist" aria-label="Choose release"></div>
+      <div class="arrows">
+        <button id="prev" aria-label="Previous release">
+          <svg width="15" height="12" viewBox="0 0 15 12" fill="none" aria-hidden="true"><path d="M6 1 1 6l5 5M1 6h13" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button id="next" aria-label="Next release">
+          <svg width="15" height="12" viewBox="0 0 15 12" fill="none" aria-hidden="true"><path d="M9 1l5 5-5 5M14 6H1" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+      </div>
+      <div class="scroll-cue"><span>Scroll</span><i id="cueLine"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ about ============ -->
+<section class="manifesto" id="about">
+  <div class="wrap">
+    <div class="manifesto__grid">
+      <h2 class="ladder" id="ladder">
+        <span class="l1"><i>into sky</i></span>
+        <span class="l2"><i>light</i></span>
+        <span class="l3"><i>dust</i></span>
+      </h2>
+      <div class="manifesto__text">
+        <p class="eyebrow" style="margin-bottom:1.25rem">About</p>
+        <p class="lede">Into Sky Records is an independent label elevating and celebrating music that brings hope and joy to people. Capturing new, imaginative sounds; a label for deep thinkers and music lovers.</p>
+        <p class="lede" style="margin-top:1.25rem">Founded in 2026 by Caoilfhionn Rose &amp; Rich Williams in Manchester, UK.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" id="marquee"></div>
+</div>
+
+<!-- ============ artists ============ -->
+<section class="sec" id="artists">
+  <div class="wrap">
+    <div class="sec__head">
+      <div>
+        <p class="eyebrow" style="margin-bottom:1rem">Roster</p>
+        <h2 class="sec__title" data-split>Artists</h2>
+      </div>
+    </div>
+    <div class="artists__grid" id="artistsGrid"></div>
+  </div>
+</section>
+
+<!-- ============ merch ============ -->
+<section class="sec" id="merch" hidden>
+  <div class="wrap">
+    <div class="sec__head">
+      <div>
+        <p class="eyebrow" style="margin-bottom:1rem">Shop</p>
+        <h2 class="sec__title" data-split>Merch</h2>
+      </div>
+    </div>
+    <div class="merch__grid" id="merchGrid"></div>
+    <div class="merch__foot">
+      <a class="btn" href="#" data-shop>Visit the store <span class="btn__dot"></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ signup ============ -->
+<section class="sec signup" id="signup">
+  <div class="wrap signup__inner">
+    <p class="eyebrow" style="margin-bottom:1.25rem">Newsletter</p>
+    <h2 class="signup__title" data-split>Keep in touch</h2>
+    <p class="lede" style="margin:1.5rem auto 0;max-width:52ch">Subscribe to hear about our latest releases, events and updates from the label.</p>
+    <form class="form" id="signupForm" novalidate>
+      <label class="sr" for="email">Email address</label>
+      <input id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+      <button class="btn btn--solid" type="submit">Subscribe <span class="btn__dot"></span></button>
+    </form>
+    <p class="form__ok" id="formOk" role="status">Thank you — check your inbox to confirm.</p>
+  </div>
+</section>
+
+<!-- ============ contact ============ -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="sec__head sec__head--label">
+      <p class="eyebrow">Contact</p>
+    </div>
+
+    <div class="contact__grid">
+      <div>
+        <a class="chan chan--solo" href="mailto:hello@intosky.co.uk">
+          <span class="chan__l">hello@intosky.co.uk</span>
+          <span class="chan__a" aria-hidden="true">Email us <svg width="13" height="10" viewBox="0 0 13 10" fill="none"><path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.2"/></svg></span>
+        </a>
+      </div>
+
+      <aside class="contact__card">
+        <h3>Into Sky Records</h3>
+        <p>Where you can find us</p>
+        
+        
+        <div class="socials">
+          <a href="#" rel="noopener">Bandcamp</a>
+          <a href="#" rel="noopener">Instagram</a>
+          <a href="#" rel="noopener">Listen</a>
+          <a href="#" rel="noopener">YouTube</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ footer ============ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div class="foot__mark">
+        <img src="assets/img/mark-badge.png" alt="" width="512" height="512">
+        <div>
+          <div class="brand__word" style="font-size:1.6rem">into sky</div>
+          <div class="eyebrow" style="margin-top:.4rem">Records — Manchester</div>
+        </div>
+      </div>
+      <nav class="foot__nav" aria-label="Footer">
+        <a href="#releases" data-link>Releases</a>
+        <a href="#about" data-link>About</a>
+        <a href="#artists" data-link>Artists</a>
+        <a href="#merch" data-link hidden>Merch</a>
+        <a href="#contact" data-link>Contact</a>
+      </nav>
+    </div>
+    <div class="foot__bottom">
+      <span>© <span id="year">2026</span> Into Sky Records. All rights reserved.</span>
+      <a class="to-top" href="#top" data-link>Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
